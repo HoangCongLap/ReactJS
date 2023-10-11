@@ -4,8 +4,7 @@ import AlbumFeature from "./features/Album/components";
 function App() {
   return (
     <div className="App">
-      {/* <AlbumFeature /> */}
-      <h1>lap</h1>
+      <AlbumFeature />
     </div>
   );
 }

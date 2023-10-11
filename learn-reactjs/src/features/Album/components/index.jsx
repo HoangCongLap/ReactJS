@@ -11,22 +11,21 @@ function AlbumFeature(props) {
     },
     {
       id: 2,
-      name: "dskfjadfsd",
+      name: "Nhạc Hoa Lời Việt",
       thumbnailUrl:
-        "<https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/b/8/7/0/b87093d7201c164981d6132ca0673745.jpg",
+        "https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/9/b/e/6/9be6f892a7f95ef25632752dd2a319c2.jpg",
     },
     {
       id: 3,
-      name: "Traof Lưu",
+      name: "Nhẹ Nhàng Cùng V-Pop",
       thumbnailUrl:
-        "https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/b/8/7/0/b87093d7201c164981d6132ca0673745.jpg",
+        "https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/d/e/3/2/de320c7f69ddf70a91f62aec66085422.jpg",
     },
   ];
-
   return (
     <div>
       <h2>Có thể bạn sẽ thích đấy </h2>
-      <AlbumList albumLis={albumList} />
+      <AlbumList albumList={albumList} />
     </div>
   );
 }
