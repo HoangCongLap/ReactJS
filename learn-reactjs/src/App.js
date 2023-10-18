@@ -8,13 +8,17 @@ import { useEffect } from 'react';
 import productApi from './api/productApi';
 
 function App() {
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     const productList = await productApi.getAll();
-  //     console.log(productList);
-  //   };
-  //   fetchProducts();
-  // }, []);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const params = {
+        _limit: 10,
+      };
+      const productList = await productApi.getAll(params);
+      // const productList = await productApi.getAll();
+      console.log(productList);
+    };
+    fetchProducts();
+  }, []);
   return (
     <div className="App">
       Home Page
