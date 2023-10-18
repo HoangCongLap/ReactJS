@@ -1,4 +1,7 @@
-import AlbumList from "./AlbumList";
+import React from 'react';
+import AlbumList from './AlbumList';
+// import './styles.scss';
+
 
 AlbumFeature.propTypes = {};
 function AlbumFeature(props) {
@@ -22,11 +25,14 @@ function AlbumFeature(props) {
         "https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/d/e/3/2/de320c7f69ddf70a91f62aec66085422.jpg",
     },
   ];
+
   return (
-    <div>
+    <div className="title">
       <h2>Có thể bạn sẽ thích đấy </h2>
       <AlbumList albumList={albumList} />
     </div>
+
   );
+
 }
 export default AlbumFeature;
