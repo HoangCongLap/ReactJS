@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useState } from 'react';
 import TodoList from '../../TodoList';
 import { useHistory, useLocation, useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
 import queryString from 'query-string';
+import TodoForm from '../../TodoForm';
+import { Value } from 'sass';
 
 ListPage.prototype = {};
 
@@ -79,8 +81,22 @@ function ListPage(props) {
     return todoList.filter((todo) => fifteredStatus === 'all' || fifteredStatus === todo.status);
   }, [todoList, fifteredStatus]);
 
+  const handTodoFormSubmit = (value) => {
+    console.log('Form submit: ', Value);
+    const newTodo = {
+      id: todoList.length + 1,
+      title: value.title,
+      status: 'new',
+    };
+    const newTodoList = [...todoList, newTodo];
+    setTodoList(newTodoList);
+  };
+
   return (
     <div>
+      <h3>What to do</h3>
+      <TodoForm onsubmit={handTodoFormSubmit} />
+
       <h3>Todo List</h3>
       {/* <TodoList todoList={todoList} onTodoClick={handleTodoList} /> */}
       <TodoList todoList={renderedTodoList} onTodoClick={handleTodoList} />

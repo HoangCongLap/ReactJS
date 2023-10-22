@@ -1,11 +1,25 @@
-{
-    "compilerOptions": {
-        "jsx": "react",
-        "baseUrl": "./src",
-        "checkJs": true,
-    },
-    "exclude": [
-        "node_modules",
-        "**/node_modules/*"
-    ]
-}
+// {
+//     "compilerOptions": {
+//         "outDir": "./dist",
+//         "target": "es5",
+//         "lib": ["es6", "dom"],
+//         "baseUrl": "./src",
+//         "checkJs": true,
+//         "module": "ES6",
+//         "jsx": "react",
+//         "moduleResolution": "node",
+//         "noImplicitAny": true,
+//         "allowSyntheticDefaultImports": true,
+//         "allowJs": true,
+//          "paths": {
+//             "@components/*": ["src/components/*"],
+//             "@views/*": ["src/views/*"],
+//             "@api/*": ["src/api/*"],
+//             "@context/*": ["src/context/*"]
+//             }
+//     },
+//     "exclude": [
+//         "dist",
+//         "node_modules",
+//     ]
+// }
