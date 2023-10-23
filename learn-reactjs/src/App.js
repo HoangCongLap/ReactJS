@@ -6,6 +6,7 @@ import TodoFeature from './components/TodoFeature';
 import NotFound from './components/NotFound';
 import { useEffect } from 'react';
 import productApi from './api/productApi';
+import './App.css';
 
 function App() {
   useEffect(() => {
@@ -19,7 +20,13 @@ function App() {
     };
     fetchProducts();
   }, []);
+
+  // const color = 'blue';
+  // const backgroundUrl =
+  //   'https://images.pexels.com/photos/1738675/pexels-photo-1738675.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
   return (
+    // <div className="App" style={{ color, backgroundImage: `url("${backgroundUrl}")` }}>
+
     <div className="App">
       Home Page
       <p>
