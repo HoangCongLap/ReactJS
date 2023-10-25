@@ -5,29 +5,9 @@ import queryString from 'query-string';
 import TodoForm from '../../TodoForm';
 import { Value } from 'sass';
 
-import { makeStyles } from '@material-ui/core/styles';
-// import Button from '@mui/material/Button';
-
-// import { makeStyles } from '@mui/styles';
-
-import Button from '@mui/material/Button';
-
-const useStyles = makeStyles({
-  root: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    border: 0,
-    borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    color: 'white',
-    height: 48,
-    padding: '0 30px',
-  },
-});
-
 ListPage.prototype = {};
 
 function ListPage(props) {
-  const classes = useStyles();
   const initTodoList = [
     {
       id: 1,
@@ -121,15 +101,9 @@ function ListPage(props) {
       {/* <TodoList todoList={todoList} onTodoClick={handleTodoList} /> */}
       <TodoList todoList={renderedTodoList} onTodoClick={handleTodoList} />
       <div>
-        <Button className={classes.root} onClick={handleShowAllClik}>
-          Show All
-        </Button>
-        <Button className={classes.root} onClick={handleShowCompletedClik}>
-          Show Completed
-        </Button>
-        <Button className={classes.root} onClick={handleShowNewClik}>
-          Show New
-        </Button>
+        <button onClick={handleShowAllClik}>Show All</button>
+        <button onClick={handleShowCompletedClik}>Show Completed</button>
+        <button onClick={handleShowNewClik}>Show New</button>
       </div>
     </div>
   );
